@@ -10,11 +10,17 @@ createWindow = () =>
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
             contextIsolation: false,
-        }
+        },
+        backgroundColor: '#c1e7c6'
+        
     })
-
+    
     app.on('activate', function () {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
+      })
+      
+    win.once('ready-to-show', () => {
+        win.show()
       })
 
     win.loadFile('index.html')
