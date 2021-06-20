@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Sudoku</title>
+    
+  </head>
+  <body>
+    <h1>Sudoku</h1>
+    <div id="Board" class="grid-container">
+        
+    </div>
+    <div>
+        <Button onclick="Reset()">Reset</Button>
+        <Button>New Game</Button>
+    </div>
+    <script defer src="./renderer.js"></script> 
+  </body>
+</html>
